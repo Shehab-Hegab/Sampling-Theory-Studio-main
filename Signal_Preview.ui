@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1044</width>
+    <height>679</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Application Background */
+QWidget {
+    background-color: #282828; /* Dark Gray */
+    color: #FFFFFF; /* White text */
+}
+
+/* Main Window */
+QMainWindow {
+    background-color: #282828; /* Dark Gray */
+    color: #FFFFFF; /* White text */
+}
+
+
+
+/* Menu Items */
+QMenu {
+    background-color: #1F1F1F; /* Slightly Darker Gray */
+    color: #FFFFFF; /* White text */
+}
+
+/* Menu Item Hover */
+QMenu::item:selected {
+    background-color: #444444; /* Dark Gray on hover */
+}
+
+/* Toolbars */
+QToolBar {
+    background-color: #1F1F1F; /* Slightly Darker Gray */
+    color: #FFFFFF; /* White text */
+}
+
+/* Push Buttons */
+QPushButton {
+    background-color: #0074D9; /* Dark Blue */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #0056B3; /* Darker Blue border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 16px; /* Padding around text */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+
+/* Push Button Hover */
+QPushButton:hover {
+    background-color: #0056B3; /* Darker Blue on hover */
+}
+
+/* Push Button Pressed */
+QPushButton:pressed {
+    background-color: #003E7D; /* Even darker blue when pressed */
+}
+
+/* Push Button Disabled */
+QPushButton:disabled {
+    background-color: #DDDDDD; /* Light gray for disabled */
+    color: #999999; /* Dimmed text */
+    border: 2px solid #CCCCCC; /* Slightly darker border for disabled */
+}
+
+/* LineEdits, TextEdits */
+QLineEdit, QTextEdit {
+    background-color: #1F1F1F; /* Slightly Darker Gray */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #444444; /* Dark Gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding around text */
+    font-size: 20px;
+}
+
+/* LineEdit and TextEdit Focus */
+QLineEdit:focus, QTextEdit:focus {
+    border-color: #77A1D3; /* Light Blue border when focused */
+}
+
+/* ScrollBars */
+QScrollBar:vertical {
+    background-color: #1F1F1F; /* Slightly Darker Gray */
+    width: 10px; /* Scroll bar width */
+    border-radius: 5px; /* Rounded corners */
+}
+
+QScrollBar::handle:vertical {
+    background-color: #444444; /* Dark Gray scroll bar handle */
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+}
+
+/* Labels */
+/* QLabel with Background Color */
+QLabel#coloredLabel {
+    background-color: #FF5733; /* Orange background */
+    color: #FFFFFF; /* White text */
+    padding: 5px; /* Padding around text */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* QLabel with Border */
+QLabel#borderedLabel {
+    border: 2px solid #3498DB; /* Border with a blue color */
+    padding: 5px; /* Padding around text */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* QLabel with Custom Font */
+QLabel#customFontLabel {
+    font-family: &quot;Arial&quot;; /* Custom font family */
+    font-size: 18px; /* Custom font size */
+    font-weight: bold; /* Bold text */
+}
+
+/* QLabel with Text Shadow */
+QLabel#shadowLabel {
+    text-shadow: 2px 2px 4px #333333; /* Text shadow with offset and color */
+}
+
+/* QLabel with Underline */
+QLabel#underlinedLabel {
+    text-decoration: underline; /* Underline text */
+}
+
+/* QLabel with Strike Through */
+QLabel#strikeThroughLabel {
+    text-decoration: line-through; /* Strike through text */
+}
+
+/* QLabel with Text Alignment */
+QLabel#centeredLabel {
+    text-align: center; /* Center-align text */
+}
+
+/* QLabel with Text Color Gradient */
+QLabel#gradientLabel {
+    background: linear-gradient(to right, #3498DB, #FF5733); /* Text color gradient */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    color: transparent; /* Hide text color */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Better QLabel Visualization */
+QLabel {
+    font-size: 16px; /* Adjust font size for better readability */
+    padding: 5px; /* Add padding for better spacing */
+    background-color: #282828; /* Dark Gray background */
+    color: #FFFFFF; /* White text for contrast */
+    border: 1px solid #555555; /* Subtle border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* QLabel with Hover Effect */
+QLabel:hover {
+    background-color: #333333; /* Slightly darker gray on hover */
+}
+
+/* QLabel with Custom Background Color */
+QLabel#customColorLabel {
+    background-color: #3498DB; /* Blue background for specific label */
+    color: #FFFFFF; /* White text for contrast */
+}
+
+/* QLabel with Text Shadow */
+QLabel#shadowLabel {
+    text-shadow: 1px 1px 2px #000000; /* Light text shadow */
+}
+
+/* QLabel with Bold Text */
+QLabel#boldTextLabel {
+    font-weight: bold; /* Bold text */
+}
+
+/* QLabel with Italics */
+QLabel#italicLabel {
+    font-style: italic; /* Italics */
+}
+
+/* QLabel with Underline */
+QLabel#underlinedLabel {
+    text-decoration: underline; /* Underline text */
+}
+
+/* QLabel with Strike Through */
+QLabel#strikeThroughLabel {
+    text-decoration: line-through; /* Strike through text */
+}
+
+
+
+
+
+
+
+
+
+
+/* Slider Stylesheet */
+QSlider {
+    background: transparent; /* Transparent background */
+    border: none; /* No border */
+}
+
+/* Slider Groove (Track) */
+QSlider::groove:horizontal {
+    background: #555555; /* Gray track background */
+    height: 6px; /* Height of the track */
+    border-radius: 3px; /* Rounded corners */
+}
+
+/* Slider Handle */
+QSlider::handle:horizontal {
+    background: #3498DB; /* Blue handle background */
+    width: 16px; /* Width of the handle */
+    margin: -8px 0; /* Center the handle vertically */
+    border-radius: 8px; /* Round handle corners */
+}
+
+/* Slider Handle Hovered State */
+QSlider::handle:horizontal:hover {
+    background: #2581C0; /* Darker blue on hover */
+}
+
+/* Slider Handle Pressed State */
+QSlider::handle:horizontal:pressed {
+    background: #1B6CAB; /* Even darker blue when pressed */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Checkbox Stylesheet for Dark Background (Enhanced) */
+QCheckBox {
+    background: transparent; /* Transparent background */
+    spacing: 5px; /* Spacing between the checkbox and text */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+    color: #FFFFFF; /* White text for contrast */
+}
+
+/* Checkbox Indicator (Unchecked) */
+QCheckBox::indicator {
+    width: 16px; /* Width of the indicator */
+    height: 16px; /* Height of the indicator */
+    border: 2px solid #FFFFFF; /* White border for contrast */
+    border-radius: 3px; /* Rounded indicator */
+}
+
+/* Checkbox Indicator (Checked) */
+QCheckBox::indicator:checked {
+    background: #3498DB; /* Blue background when checked */
+    border: 2px solid #FFFFFF; /* White border when checked */
+}
+
+/* Checkbox Indicator (Hovered) */
+QCheckBox::indicator:hover {
+    border: 2px solid #FFFFFF; /* White border on hover for contrast */
+}
+
+/* Checkbox Text (Unchecked) */
+QCheckBox::indicator:unchecked {
+    background: transparent; /* Transparent background for unchecked */
+    border-radius: 3px; /* Rounded indicator */
+}
+
+/* Checkbox Text (Checked) */
+QCheckBox::indicator:checked:hover {
+    border: 2px solid #FFFFFF; /* White border on hover when checked */
+}
+
+/* Checkbox Text (Hovered) */
+QCheckBox::indicator:unchecked:hover {
+    border: 2px solid #FFFFFF; /* White border on hover for unchecked */
+}
+
+/* Checkbox Text (Disabled) */
+QCheckBox:disabled {
+    color: #888888; /* Dimmed text for disabled */
+}
+
+/* Checkbox Indicator (Disabled) */
+QCheckBox::indicator:unchecked:disabled {
+    background: transparent; /* Transparent background for unchecked when disabled */
+    border: 2px solid #777777; /* Slightly darker gray border for unchecked when disabled */
+}
+
+QCheckBox::indicator:checked:disabled {
+    background: #999999; /* Light gray background when checked and disabled */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* QGraphicsView Stylesheet */
+QGraphicsView {
+    background-color: #333333; /* Dark background color */
+    border: 1px solid #555555; /* Border for the QGraphicsView */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Scroll Bars */
+QScrollBar:horizontal, QScrollBar:vertical {
+    background-color: #555555; /* Scroll bar background color */
+    border-radius: 4px; /* Rounded corners for the scroll bars */
+}
+
+QScrollBar::handle:horizontal, QScrollBar::handle:vertical {
+    background-color: #888888; /* Scroll bar handle color */
+    border-radius: 4px; /* Rounded handle */
+}
+
+QScrollBar::handle:horizontal:hover, QScrollBar::handle:vertical:hover {
+    background-color: #AAAAAA; /* Hover effect on the handle */
+}
+
+QScrollBar::sub-line, QScrollBar::add-line {
+    background: none; /* No background for arrow buttons */
+}
+
+QScrollBar::add-line:vertical {
+    height: 0px; /* Hide vertical scroll bar's bottom arrow button */
+}
+
+QScrollBar::sub-line:vertical {
+    height: 0px; /* Hide vertical scroll bar's top arrow button */
+}
+
+QScrollBar::add-line:horizontal {
+    width: 0px; /* Hide horizontal scroll bar's right arrow button */
+}
+
+QScrollBar::sub-line:horizontal {
+    width: 0px; /* Hide horizontal scroll bar's left arrow button */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* QTextEdit Stylesheet (Improved) */
+QTextEdit {
+    background-color: #282828; /* Dark background */
+    border: 1px solid #444444; /* Dark gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 4px; /* Font size */
+    color: #FFFFFF; /* White text color */
+    padding: 5px; /* Padding around the text */
+}
+
+/* QTextEdit Focus State */
+QTextEdit:focus {
+    border-color: #3498DB; /* Blue border when focused */
+}
+
+/* QTextEdit Scroll Bars */
+QTextEdit QScrollBar:vertical {
+    background-color: #282828; /* Dark background for vertical scrollbar */
+    width: 12px; /* Scroll bar width */
+    margin: 0px; /* No margin for scrollbar */
+}
+
+QTextEdit QScrollBar::handle:vertical {
+    background-color: #555555; /* Gray scrollbar handle */
+    border-radius: 6px; /* Rounded scrollbar handle */
+}
+
+QTextEdit QScrollBar::add-line:vertical,
+QTextEdit QScrollBar::sub-line:vertical {
+    background: none; /* No background for arrow buttons */
+}
+
+QTextEdit QScrollBar::add-page:vertical,
+QTextEdit QScrollBar::sub-page:vertical {
+    background: none; /* No background for page buttons */
+}
+
+
+/* Custom Styles for Signal Viewer Components */
+/* Add your custom styles for specific components here */
+
+
+
+
+
+
+
+
+
+
+
+
+/* QMenuBar Stylesheet for Dark Theme */
+QMenuBar {
+    background-color: #333333; /* Dark background color */
+    color: #FFFFFF; /* Text color */
+    padding: 2px; /* Add some padding to the menu bar */
+    border: 1px solid #444444; /* Dark gray border */
+}
+
+/* QMenuBar Item Styles */
+QMenuBar::item {
+    background-color: transparent; /* Transparent background for items */
+    padding: 6px 12px; /* Padding for items */
+    border-radius: 4px; /* Rounded corners for items */
+}
+
+/* QMenuBar Item Hover State */
+QMenuBar::item:hover {
+    background-color: #555555; /* Slightly darker background on hover */
+}
+
+/* QMenuBar Item Pressed State */
+QMenuBar::item:pressed {
+    background-color: #1B6CAB; /* Darker blue background when pressed */
+    color: #FFFFFF; /* White text color when pressed */
+}
+
+/* QMenuBar Submenu Arrow */
+QMenuBar::item:open:menu {
+    subcontrol-origin: padding;
+    subcontrol-position: right;
+    padding-right: 8px; /* Spacing for submenu arrow */
+    border-top-right-radius: 4px; /* Rounded corner for the right side */
+    border-bottom-right-radius: 4px; /* Rounded corner for the right side */
+}
+
+/* QMenuBar Submenu Styles */
+QMenu {
+    background-color: #333333; /* Dark background for submenu */
+    border: 1px solid #444444; /* Dark gray border for submenu */
+}
+
+/* QMenuBar Submenu Item Styles */
+QMenu::item {
+    background-color: transparent; /* Transparent background for submenu items */
+    padding: 6px 18px; /* Padding for submenu items */
+}
+
+/* QMenuBar Submenu Item Hover State */
+QMenu::item:hover {
+    background-color: #555555; /* Slightly darker background on hover for submenu items */
+}
+
+
+
+
+/* QMenuBar Stylesheet with Enhanced Text */
+QMenuBar {
+    background-color: #333333; /* Dark background color */
+    color: #FFFFFF; /* Text color */
+    padding: 2px; /* Add some padding to the menu bar */
+    border: 1px solid #444444; /* Dark gray border */
+    font-size: 16px; /* Font size for menu bar items */
+    font-weight: bold; /* Bold text for menu bar items */
+}
+
+/* QMenuBar Item Styles */
+QMenuBar::item {
+    background-color: transparent; /* Transparent background for items */
+    padding: 6px 12px; /* Padding for items */
+    border-radius: 4px; /* Rounded corners for items */
+}
+
+/* QMenuBar Item Hover State */
+QMenuBar::item:hover {
+    background-color: #555555; /* Slightly darker background on hover */
+}
+
+/* QMenuBar Item Pressed State */
+QMenuBar::item:pressed {
+    background-color: #1B6CAB; /* Darker blue background when pressed */
+    color: #FFFFFF; /* White text color when pressed */
+}
+
+/* QMenuBar Submenu Arrow */
+QMenuBar::item:open:menu {
+    subcontrol-origin: padding;
+    subcontrol-position: right;
+    padding-right: 8px; /* Spacing for submenu arrow */
+    border-top-right-radius: 4px; /* Rounded corner for the right side */
+    border-bottom-right-radius: 4px; /* Rounded corner for the right side */
+}
+
+/* QMenuBar Submenu Styles */
+QMenu {
+    background-color: #333333; /* Dark background for submenu */
+    border: 1px solid #444444; /* Dark gray border for submenu */
+}
+
+/* QMenuBar Submenu Item Styles */
+QMenu::item {
+    background-color: transparent; /* Transparent background for submenu items */
+    padding: 6px 18px; /* Padding for submenu items */
+}
+
+/* QMenuBar Submenu Item Hover State */
+QMenu::item:hover {
+    background-color: #555555; /* Slightly darker background on hover for submenu items */
+}
+
+
+
+/* ComboBox Stylesheet */
+QComboBox {
+    background-color: #1F1F1F; /* Slightly Darker Gray */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #444444; /* Dark Gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding around text */
+    min-width: 6em; /* Minimum width of the combo box */
+}
+
+/* ComboBox Arrow */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 15px; /* Adjust the width of the arrow */
+    border-left-width: 0px; /* No border on the left side of the arrow */
+    border-top-right-radius: 5px; /* Rounded top-right corner for arrow background */
+    border-bottom-right-radius: 5px; /* Rounded bottom-right corner for arrow background */
+    background-color: #444444; /* Dark Gray for the arrow background */
+}
+
+/* ComboBox Items */
+QComboBox QAbstractItemView {
+    background-color: #1F1F1F; /* Slightly Darker Gray */
+    color: #FFFFFF; /* White text */
+    selection-background-color: #444444; /* Dark Gray on item selection */
+}
+
+/* ComboBox Hovered State */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #444444; /* Dark Gray on item hover */
+}
+
+/* ComboBox Focus State */
+QComboBox:focus {
+    border-color: #77A1D3; /* Light Blue border when focused */
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Maximum</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>13</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QSlider" name="PlotSlider">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="PlotWidget" name="SignalPreviewGraph" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>700</width>
+               <height>500</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>30</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QLineEdit" name="FrequencyEdit">
+                 <property name="placeholderText">
+                  <string>Frequency</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Maximum</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>13</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="AmplitudeEdit">
+                 <property name="placeholderText">
+                  <string>Amplitude</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Minimum</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>250</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QPushButton" name="AddButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Add</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <zorder></zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">pyqtgraph.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

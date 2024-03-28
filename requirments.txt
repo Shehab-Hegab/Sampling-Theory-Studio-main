@@ -1,0 +1,7 @@
+wfdb
+numpy
+pandas
+PyQt5
+pyqtgraph
+reportlab
+pyqt5-tools
